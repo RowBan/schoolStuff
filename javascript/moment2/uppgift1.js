@@ -5,7 +5,7 @@
  */
 
 function multiply(x, y) {
-    return x * y;
+    return console.log(x + " * " + y + " = " + x * y);
 }
 
-console.log(multiply(4, 4));
+multiply(5, 890)
