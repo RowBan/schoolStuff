@@ -6,4 +6,4 @@
 
 let colors = ['Röd', 'Blå', 'Turkos', 'Brun', 'Färnkålsvit'];
 
-console.log(colors);
+colors.forEach((color) => console.log(color));
