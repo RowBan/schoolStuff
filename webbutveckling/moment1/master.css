@@ -1,0 +1,108 @@
+/* Bakgrundsbildens dimensioner  */
+html{
+  /*  Bild från https://unsplash.com/@joshuaryanphoto */
+  background: url(background.jpg) no-repeat center center fixed; 
+  /* Support för Webkit browsers  */
+  -webkit-background-size: cover;
+  /*  Support för Fireforx */
+  -moz-background-size: cover;
+  /*  Support för IE */
+  -ms-background-size: cover;
+  /*  Support för Opera */
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Importerat CSS regler för rendering av ikoner (Google) */
+.material-icons {
+  colour: rgba(255,0,0,0.5);
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Länk-färger  */
+
+a:link {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: rebeccapurple;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/*  Dimensioner av innehåll 1 */
+.innehall1{
+	background-color: rgba(200,200,200,0.7);
+	padding: 30px;
+  float: left;
+	min-height: 90vh;
+	width: 400px;
+  border-radius: 10%;
+  border-style: solid;
+}
+
+/*  Dimensioner av innehåll 2 */
+.innehall2{
+  background-color: rgba(200,200,200,0.7);
+  padding: 30px;
+  float: right;
+  min-height: 90vh;
+  width: 400px;
+  border-radius: 10%;
+  border-style: solid;
+}
+
+/*  Dimensioner av innehåll 3 */
+.innehall3{
+	background-color: rgba(200,200,200,0.7);
+	padding: 30px;
+	height: auto;
+	width: auto;
+  margin: auto;
+  border-radius: 0%;
+  border-style: solid;
+}
+
+
+/* Profilbild dimensioner */
+.profilbild{
+	height: 500px;
+	padding: 15px;
+	border-radius: 10%;
+}
