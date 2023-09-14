@@ -4,6 +4,8 @@
  * depending on options given 1-3
  */
 
+"use strict";
+
 function printDateAndTime(option) {
 
     const date = new Date();

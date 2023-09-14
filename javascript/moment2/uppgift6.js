@@ -3,12 +3,15 @@
  * returns string with the most
  * characters in it
  */
+
+"use strict";
+
 let arr = ["Örnsköldsvik", "Sundsvall", "Härnösand", "Östersund"];
 
 function findLongString(arg1) {
 
     // Determin length of largest string
-    longestString = Math.max(...(arg1.map(element => element.length)));
+    let longestString = Math.max(...(arg1.map(element => element.length)));
 
     // Compare largest string with all strings and print it
     for (let i = 0; i < arg1.length; i++) {

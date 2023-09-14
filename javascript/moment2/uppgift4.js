@@ -3,6 +3,8 @@
  * array-exercise program
  */
 
+"use strict";
+
 let array = ["string on index 0", 4, "index 1 is an integer", 99, "index 2 and 3 are also integers. Where's the float?", null, 99.99];
 
 // Remove 1 element from index 1

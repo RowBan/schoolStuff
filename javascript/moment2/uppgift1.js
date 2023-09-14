@@ -3,6 +3,7 @@
  * a simple function to multiply
  * two digits
  */
+"use strict";
 
 function multiply(x, y) {
     return console.log(x + " * " + y + " = " + x * y);
