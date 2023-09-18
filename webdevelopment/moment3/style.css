@@ -1,0 +1,31 @@
+html, body {
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url("./background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+.container {
+    float: left;
+}
+
+.main-content {
+    float: left;
+    width: 66.66%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.sidebar-menu {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    background-color: #fff;;
+}
