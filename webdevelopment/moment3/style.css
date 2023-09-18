@@ -13,10 +13,13 @@ h1 {
 
 .container {
     float: left;
+    display: block;
 }
 
 .main-content {
     float: left;
+    position: relative;
+    left: 20px;
     width: 66.66%;
     height: 100%;
     margin: 0 auto;
@@ -25,7 +28,9 @@ h1 {
 
 .sidebar-menu {
     float: left;
+    position: relative;
+    left: 0;
     width: 33.33%;
     height: 100%;
-    background-color: #fff;;
+    background-color: #fff;
 }
