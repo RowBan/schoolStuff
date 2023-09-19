@@ -1,34 +1,73 @@
-html, body {
-    background-image: url(./background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+:root {
+    font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #2b2b2b;
+    --bg-secondary: #531515;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    color: white;
-    text-align: center;
+header {
+    width: 100vw;
+    position: sticky;
+    float: right;
+    width: 90%;
+    margin: 0 0 0 0; /* top right down left */
+    padding: 0 0 0 0; /* top right down left */
 }
 
-img {
+body {
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    background: var(--bg-primary);
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--bg-secondary);
+}
+
+main {
+    margin: 0 0 0 0; /* top right down left */
+    padding: 0 0 0 0; /* top right down left */
+}
+
+footer {
+    clear: both;
+    width: 100vw;
+}
+
+.main-content {
+    width: 50%;
+}
+
+.navbar {
+    position: fixed;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
+    float: left;
+    width: 10%;
+    height: 100%;
+    background-color: var(--bg-primary);
+    margin: 0 0 0 0; /* top right down left */
+    padding: 0 0 0 0; /* top right down left */
+    list-style: none;
 }
 
-.main-content-sidebar-menu {
-    float: left;
-    background-color: #fff;
-    width: 20%;
-    margin-top: 5%;
+.m-articles {
+    display: block;
+    float: right;
+    width: 90%;
+    background-color: var(--bg-secondary);
+    padding: 0 0 0 0; /* top right down left */
+    margin: 0 0 0 0; /* top right down left */
 }
 
-.main-content-articles {
-    float: left;
-    background-color: #fff;
-    width: 70%;
-    margin-left: 5%;
-    margin-top: 5%;
+.nav-item:last-child {
+    margin: 0 0 0 0; /* top right down left */
+    padding: 0 0 0 0; /* top right down left */
 }
