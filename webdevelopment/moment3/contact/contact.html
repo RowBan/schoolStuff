@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Contact</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <h1>Contact</h1>
+        <nav>
+            <ul>
+                <li><a href="./../index.html">Home</a></li>
+                <li><a href="./../pictures/pictures.html">Gallery</a></li>
+                <li><a href="./../contact/contact.html">Contact</a></li>
+                <li><a href="./../about/about.html">About</a></li>
+                <li><a href="./../courses/courses.html">Courses</a></li>
+            </ul>
+        </nav>
+    </header><br>
+    <p>If you'd like to contact me, please use the form below</p><br>
+    <form style="position:absolute; left:0;">
+        <fieldset>
+            <legend>Contact form:</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Firstname Surname"><br><br>
+
+            <label for="mail">E-mail:</label>
+            <input type="text" name="mail" id="mail" placeholder="E-mailadress"><br><br>
+
+            <label for="profession">Profession:</label>
+            <select name="profession" id="profession">
+                <option value="webdeveloper">Webdeveloper</option>
+                <option value="webdesigner">Webdesigner</option>
+                <option value="projectlead">Projectlead</option>
+                <option value="manager">Manager</option>
+            </select><br><br>
+
+            <label for="newsletter">Newsletter:</label>
+            <input type="checkbox" name="newsletter" id="newsletter"><br><br>
+
+            <label>Employment Status:</label><br>
+            <input type="radio" name="employment" id="employed">
+            <label for="employed">Employed</label>
+            <input type="radio" name="employment" id="unemployed">
+            <label for="unemployed">Unemployed</label><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea name="message" id="message"></textarea><br>
+
+            <input type="submit" value="Submit"> <input type="reset" value="Reset">
+    </fieldset>
+    </form>
+</body>
+</html>

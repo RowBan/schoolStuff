@@ -1,36 +1,34 @@
 html, body {
-    font-family: 'Courier New', Courier, monospace;
-    background-image: url("./background.jpg");
+    background-image: url(./background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-h1 {
-    text-align: center;
-    font-size: 50px;
+h1, h2, h3, h4, h5, h6, p {
     color: white;
+    text-align: center;
 }
 
-.container {
-    float: left;
+img {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
 }
 
-.main-content {
-    float: right;
-    position: relative;
-    left: 20px;
-    width: 66.66%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: #fff;
-}
-
-.sidebar-menu {
+.main-content-sidebar-menu {
     float: left;
-    position: relative;
-    left: 0;
-    width: 33.33%;
-    height: 100%;
     background-color: #fff;
+    width: 20%;
+    margin-top: 5%;
+}
+
+.main-content-articles {
+    float: left;
+    background-color: #fff;
+    width: 70%;
+    margin-left: 5%;
+    margin-top: 5%;
 }
