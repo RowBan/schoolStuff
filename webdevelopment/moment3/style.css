@@ -1,30 +1,56 @@
 :root {
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
-    --text-primary: #f5f7f7;
-    --text-secondary: #edb518;
-    --bg-primary: #000407;
-    --bg-secondary: #79031D;
+    --text-primary: #848c84;
+    --text-secondary: #8c5c34;
+    --bg-primary: #303e3f;
+    --bg-secondary: rgb(57, 85, 99, 0.8); /* #395563 converted, want opacity */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+p {
+    color: var(--text-primary);
+    text-align: center;
+}
+
+time {
+    color: var(--text-primary);
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
 }
 
 header {
+    position: sticky;
+    float: left;
     width: 100vw;
     height: 5vh;
-    position: fixed;
-    float: right;
-    width: 95%; 
-    margin: 0 0 0 5%; /* top right down left */
-    padding: 0 0 0 0; /* top right down left */
+    width: 65%; 
+    margin: 0 0 0 20%; /* top right down left */
+    padding: 0 0 2rem 0; /* top right down left */
     background-color: var(--bg-primary);
     text-align: center;
     color: var(--text-primary);
+    z-index: 1;
 }
 
 body {
-    background-color: #fff;
-    color: #000;
     margin: 0;
     padding: 0;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
 }
 
 body::-webkit-scrollbar {
@@ -48,21 +74,28 @@ footer {
     padding: 0 0 0 0; /* top right down left */
 }
 
-.navbar {
-    position: fixed;
-    display: block;
-    float: left;
-    width: 5%;
-    height: 100vh;
-    background-color: var(--bg-primary);
-    margin: 0 0 0 0; /* top right down left */
-    padding: 5rem 0 0 0; /* top right down left */
-    list-style: none;
+img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    max-height: 600px;
 }
 
-.navbar:hover {
-    width: 10%;
-    transition: width 0.5s ease-in-out;
+.navbar {
+    clear: right;
+    position: fixed;
+    float: left;
+    width: 5.1%; 
+    height: 100vh;
+    background-color: var(--bg-primary);
+    margin: 0 0 0 20%; /* top right down left */
+    padding: 0 0 0 0; /* top right down left */
+    list-style: none;
+    z-index: 1;
+}
+
+.navbar:hover header {
+    height:100vh;
 }
 
 .nav-text {
@@ -78,27 +111,42 @@ footer {
     transform: rotate(180deg);
     transition: 300ms ease-in-out;
 }
+@media only screen and (min-width: 700px) {
+    .navbar:hover {
+        transition: width margin-left 0.5s ease-in-out;
+        width: 10%;
+        z-index: 1;
+    }
+}
+
 
 .nav-item, .nav-logo {
     margin: 0 0 0 0; /* top right down left */
     padding: 0 0 0 0; /* top right down left */
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: all 0.5s ease-in-out;
+}
+
+.nav-item svg, .nav-logo svg {
+    fill: var(--text-primary);
+    transition: 300ms ease-in-out; 
+}
+
+.nav-logo svg {
+    fill: var(--text-secondary);
+    margin: 5rem 0 5rem 0; /* top right down left */
+    padding: 0 0 0 0; /* top right down left */
 }
 
 .nav-item:hover {
     background-color: var(--bg-secondary);
+    fill: var(--text-secondary);
     transition: 300ms ease-in-out;
     border-radius: 5rem 0 0 5rem; /* top-left top-right bottom-right bottom-left */
 }
 
-.nav-item svg {
-    fill: var(--text-primary);
-    transition: 300ms ease-in-out;
-}
-
-.nav-item svg:hover {
+.nav-item:hover svg {
     fill: var(--text-secondary);
     transition: 300ms ease-in-out;
 }
@@ -109,12 +157,23 @@ footer {
 
 }
 
+.nav-link {
+    display: block;
+    text-decoration: none;
+    color: var(--text-secondary);
+    padding: 1rem 0 1rem 0; /* top right down left */
+    margin: 5% 0 0 0; /* top right down left */
+    
+}
+
 .m-articles {
+    clear: right;
     float: right;
-    width: 95%;
+    width: 60%;
+    height: 100%;
     background-color: var(--bg-secondary);
     padding: 0 0 0 0; /* top right down left */
-    margin: 0 0 0 0; /* top right down left */
+    margin: 0 15% 0 0; /* top right down left */
 }
 
 svg {
@@ -122,4 +181,81 @@ svg {
     height: 3rem;
     margin: 0 0 0 0; /* top right down left */
     padding: 0 0 0 0; /* top right down left */
+}
+
+time {
+    margin: 0 29% 0 29%; /* top right down left */
+    padding: 0 0 0 0; /* top right down left */
+}
+
+@media only screen and (max-width: 700px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 10vh;
+        position: fixed;
+        margin: 0 0 0 0; /* top right down left */
+        padding: 0 0 0 0; /* top right down left */
+    }
+
+    .nav-item {
+        float: left;
+        width: 20%;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    .nav-item, .nav-logo {
+        margin: 0 0 0 0; /* top right down left */
+        padding: 0 0 0 0; /* top right down left */
+        text-align: center;
+        font-size: 1.2rem;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .nav-item svg, .nav-logo svg {
+        fill: var(--text-primary);
+        transition: 300ms ease-in-out; 
+    }
+    
+    .nav-logo svg {
+        fill: var(--text-secondary);
+        margin: 5rem 0 5rem 0; /* top right down left */
+        padding: 0 0 0 0; /* top right down left */
+    }
+    
+    .nav-item:hover {
+        background-color: var(--bg-secondary);
+        fill: var(--text-secondary);
+        transition: 300ms ease-in-out;
+        border-radius: 0rem 0rem 5rem 5rem; /* top-left top-right bottom-right bottom-left */
+    }
+    
+    .nav-item:hover svg {
+        fill: var(--text-secondary);
+        transition: 300ms ease-in-out;
+    }
+
+    .m-articles {
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-secondary);
+        padding: 0 0 0 0; /* top right down left */
+        margin: 0 0 0 0; /* top right down left */
+    }
+
+    header {
+        width: 100%;
+        height: 10vh;
+        margin: 0 0 0 0; /* top right down left */
+        padding: 0 0 0 0; /* top right down left */
+    }
+
+    .navbar:hover  {
+        transition: height margin-bottom 0.5s ease-in-out;
+        height: 12%;
+        z-index: 1;
+    }
 }
