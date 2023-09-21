@@ -28,7 +28,18 @@ img {
     margin-right: auto;
     width: auto;
     height: auto;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    max-height: 600px;
 }
+
+.picture-items img {
+    float: left;
+    margin: 0 0 0 0; /* top right down left */
+    padding: 5% 5% 5% 5%; /* top right down left */
+}
+
 
 header {
     position: sticky;
@@ -45,12 +56,31 @@ header {
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0 0 0 0; /* top right down left */
+    padding: 0 0 0 0; /* top right down left */
     background-image: url("background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: content-box;
+    height: 100vh;
+    width: 100vw;
+
+}
+table, tr, td, th, legend, fieldset {
+    border: 1px solid var(--text-secondary);
+}
+
+table, tr, td, th, form {
+    color: var(--text-primary);
+    border-collapse: collapse;
+    font-weight: 700;
+    width: 95%;
+    margin: 0 0 2.5% 2.5%; /* top right down left */
+}
+
+td:last-child {
+    text-align: center;
+    column-span: 3;
 }
 
 body::-webkit-scrollbar {
@@ -72,13 +102,6 @@ footer {
     width: 100vw;
     margin: 0 0 0 0; /* top right down left */
     padding: 0 0 0 0; /* top right down left */
-}
-
-img {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    max-height: 600px;
 }
 
 .navbar {
@@ -111,6 +134,7 @@ img {
     transform: rotate(180deg);
     transition: 300ms ease-in-out;
 }
+
 @media only screen and (min-width: 700px) {
     .navbar:hover {
         transition: width margin-left 0.5s ease-in-out;
@@ -118,7 +142,6 @@ img {
         z-index: 1;
     }
 }
-
 
 .nav-item, .nav-logo {
     margin: 0 0 0 0; /* top right down left */
@@ -166,13 +189,27 @@ img {
     
 }
 
-.m-articles {
+.m-gallery-nav {
+    clear: both;
+    margin: 0 0 0 40.05%; /* top right down left */
+    padding: 1rem 0 1rem 0; /* top right down left */
+}
+
+.m-gallery-nav a, .m-gallery-nav li  {
+    text-decoration: none;
+    color: var(--text-secondary);
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.m-articles, .m-courses, .m-about, .m-pictures, .m-contact {
     clear: right;
     float: right;
     width: 60%;
     height: 100%;
     background-color: var(--bg-secondary);
-    padding: 0 0 0 0; /* top right down left */
+    padding: 0 0 100vh 0; /* top right down left */
     margin: 0 15% 0 0; /* top right down left */
 }
 
@@ -238,7 +275,7 @@ time {
         transition: 300ms ease-in-out;
     }
 
-    .m-articles {
+    .m-articles, .m-courses, .m-about, .m-pictures, .m-contact {
         width: 100%;
         height: 100%;
         background-color: var(--bg-secondary);
