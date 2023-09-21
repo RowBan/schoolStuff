@@ -1,3 +1,5 @@
+/* Common elements */
+
 :root {
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
@@ -32,13 +34,6 @@ img {
     max-height: 300px;
 }
 
-.picture-items img {
-    float: left;
-    margin: 0 0 0 0; /* top right down left */
-    padding: 5% 5% 5% 5%; /* top right down left */
-}
-
-
 header {
     position: sticky;
     float: left;
@@ -62,32 +57,6 @@ body {
     background-clip: content-box;
     height: 100vh;
     width: 100vw;
-
-}
-table, tr, td, th, legend, fieldset {
-    border: 1px solid var(--text-secondary);
-}
-
-table, tr, td, th, form {
-    color: var(--text-primary);
-    border-collapse: collapse;
-    font-weight: 700;
-    width: 95%;
-    margin: 0 0 2.5% 2.5%; /* top right down left */
-}
-
-td:last-child {
-    text-align: center;
-    column-span: 3;
-}
-
-body::-webkit-scrollbar {
-    background: var(--bg-secondary);
-    width: 0.5rem;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: var(--bg-primary);
 }
 
 main {
@@ -100,6 +69,40 @@ footer {
     width: 100vw;
     margin: 0 0 0 0; /* top right down left */
     padding: 0 0 0 0; /* top right down left */
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+    background: var(--bg-secondary);
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--bg-primary);
+}
+
+table, tr, td, th, legend, fieldset {
+    border: 1px solid var(--text-secondary);
+}
+
+table, tr, td, th, form {
+    color: var(--text-primary);
+    border-collapse: collapse;
+    font-weight: 700;
+    width: 95%;
+    margin: 0 0 2.5% 2.5%; /* top right down left */
+}
+
+/* Class elements */
+.picture-items img {
+    float: left;
+    margin: 0 0 0 0; /* top right down left */
+    padding: 5% 5% 5% 5%; /* top right down left */
+}
+
+td:last-child {
+    text-align: center;
+    column-span: 3;
 }
 
 .navbar {
@@ -223,6 +226,7 @@ time {
     padding: 0 0 0 0; /* top right down left */
 }
 
+/* Responsive nav-bar */
 @media only screen and (max-width: 700px) {
     .navbar {
         bottom: 0;
