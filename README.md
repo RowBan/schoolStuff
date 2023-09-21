@@ -1,4 +1,4 @@
-# Project Title
+# Webdevelopment
 
 Simple overview of use/purpose.
 
@@ -6,8 +6,6 @@ Simple overview of use/purpose.
 
 A practice project for the program Webdevelopment at the Midsweden University.
 Mainly focused on JavaScript, CSS, HTML and SQL.
-
-## Getting Started
 
 ### Dependencies
 
