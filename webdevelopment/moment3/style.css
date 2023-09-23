@@ -109,7 +109,7 @@ td:last-child {
     clear: right;
     position: fixed;
     float: left;
-    width: 5.1%; 
+    width: 5.2%; 
     height: 100vh;
     background-color: var(--bg-primary);
     margin: 0 0 0 20%; /* top right down left */
@@ -167,7 +167,17 @@ td:last-child {
     background-color: var(--bg-secondary);
     fill: var(--text-secondary);
     transition: 300ms ease-in-out;
-    border-radius: 5rem 0 0 5rem; /* top-left top-right bottom-right bottom-left */
+    border-radius: 4rem 0 0 4rem; /* top-left top-right bottom-right bottom-left */
+}
+
+.navbar-gallery {
+    display: none;
+}
+
+.nav-item:nth-child(3):hover .navbar-gallery {
+    display:block;
+    list-style: none;
+    transition: 500ms ease-in-out;
 }
 
 .nav-item:hover svg {
@@ -269,7 +279,7 @@ time {
         background-color: var(--bg-secondary);
         fill: var(--text-secondary);
         transition: 300ms ease-in-out;
-        border-radius: 0rem 0rem 5rem 5rem; /* top-left top-right bottom-right bottom-left */
+        border-radius: 0rem 0rem 4rem 4rem; /* top-left top-right bottom-right bottom-left */
     }
     
     .nav-item:hover svg {
