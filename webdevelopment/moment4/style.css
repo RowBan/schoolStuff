@@ -1,0 +1,74 @@
+:root {
+    --bg-primary: #2F80ED;
+    --bg-secondary: #E0ECFD;
+    --current-viewport: 100vw; /* Scale variable */
+    --desired-viewport: 1600; /* Scale variable */
+        --ideal-font-size: 24px; /* Scale variable */
+    --layout-viewport-width: 1920; /* Scale variable */
+    --layou-viewport-height: 1080; /* Scale variable */
+    --breakpoint-1: 600px; /* Scale variable */
+    --breakpoint-2: 1024px; /* Scale variable */
+    background-color: #fff;
+/*  max-width: 1600px;
+    min-width: 600px; */
+    height: auto;
+    font-family: 'Inter', sans-serif;
+    padding: 0; 
+    margin: 0; 
+    /* Original width 1920px */
+    /* Original height 2211px */
+
+}
+
+.grid-1 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Repeat 2fr 2 times for 50% per  */
+}
+
+.grid-1 svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.grid-1-1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    color: #000;
+}
+
+ul[data-title]::before {
+    content: attr(data-title);
+    display: inherit;
+    font-size: 100px
+}
+
+.grid-1-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg-primary);
+    font-weight: 600;
+    color: #fff;
+    font-size: 30px
+}
+
+.grid-2-1 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: clamp(600px, 1024px, 1600px);
+    align-items: center;
+    background: #fff;
+
+}
+
+.grid-2-1 img {
+    width: 265px;
+    height: 265px;
+    border-radius: 5.5rem;
+}
