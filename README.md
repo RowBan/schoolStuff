@@ -1,6 +1,6 @@
-# Project Title
+# schoolStuff
 
-Simple overview of use/purpose.
+General repository for variour projects and tasks.
 
 ## Description
 
