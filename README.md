@@ -7,8 +7,6 @@ General repository for variour projects and tasks.
 A practice project for the program Webdevelopment at the Midsweden University.
 Mainly focused on JavaScript, CSS, HTML and SQL.
 
-## Getting Started
-
 ### Dependencies
 
 A browser.
