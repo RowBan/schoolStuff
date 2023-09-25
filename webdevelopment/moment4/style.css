@@ -1,12 +1,12 @@
 :root {
     --primary-color: #2F80ED;
     --secondary-color: #E0ECFD;
-    --width-ratio: calc(1600 / 1920); /* For scaling elements width to 1600px -- Original width 1920px */
-    --height-ratio: calc(900 / 1080); /* For scaling elements height to 900px -- Original height 1080px */
+    --width-ratio: calc(100vw / 1920); /* For scaling elements width to 1600px -- Original width 1920px */
+    --height-ratio: calc(600 / 1080); /* For scaling elements height to 900px -- Original height 1080px */
     /* font-size: 62.5%; */
-    max-width: 1600px;
+/*     max-width: 1600px;
     min-width: 600px;
-    height: auto;
+    max-height: 900px; */
     font-family: 'Inter', sans-serif;
     padding: 0; 
     margin: 0;
@@ -61,7 +61,7 @@ ul {
 .grid-1-1 {
     grid-column: 1 / 2;
     font-size: calc(24px * var(--width-ratio)); /* Original font-size * 0.83 or 83% */
-    /* margin: 0 calc(106px * var(--width-ratio)) 0 calc(127px * var(--width-ratio)); */ /* Right and left margin scaling to 83% */
+    margin: 0 calc(106px * var(--width-ratio)) 0 calc(127px * var(--width-ratio)); /* Right and left margin scaling to 83% */
     /* ^-- Causes overflow, so commented for now */
 }
 
@@ -70,7 +70,7 @@ ul {
     grid-column: 2 / -1;
     background-color: var(--primary-color);
     font-size: calc(30px * var(--width-ratio)); /* Original font-size * 0.83 or 83% */
-    width: calc(978px * var(--width-ratio));
+    width: clamp(498px, calc(978px * var(--width-ratio)), 811.74px);
     height: calc(786px * var(--height-ratio));
     border-radius: 0 0 0 calc(262px * var(--width-ratio));
 }
