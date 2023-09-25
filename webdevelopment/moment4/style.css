@@ -1,16 +1,16 @@
 :root {
     --primary-color: #2F80ED;
     --secondary-color: #E0ECFD;
-    --width-ratio: calc(1600 * (100vw / 1920)); /* For scaling elements width to 1600px -- Original width 1920px */
-    --height-ratio: calc(900 / 1080); /* For scaling elements height to 900px -- Original height 1080px */
+    --width-ratio: clamp(600px, calc(1600 * (100vw / 1920)), 1600px); /* For scaling elements width to 1600px -- Original width 1920px */
+    --height-ratio: calc(900 * (100vh / 1080)); /* For scaling elements height to 900px -- Original height 1080px */
     /* font-size: 62.5%; */
-/*     max-width: 1600px;
-    min-width: 600px; */
+    max-width: 1600px;
+    min-width: 600px;
     font-family: 'Inter', sans-serif;
     width: var(--width-ratio);
+    height: var(--height-ratio);
     padding: 0; 
     margin: 0;
-    aspect-ratio: 16 / 9;
 }
 
 h1, h2 {
@@ -26,8 +26,8 @@ ul {
 /* Top right logo */
 .grid-1-1 svg {
     position: absolute;
-    width: calc(100px * var(--width-ratio));
-    height: calc(90.47px * var(--height-ratio));
+    width: calc(0.0520833 * var(--width-ratio));
+    height: calc(0.04709375 * var(--height-ratio));
     top: 0;
     left: 0;
 }
@@ -62,7 +62,7 @@ ul {
 .grid-1-1 {
     grid-column: 1 / 2;
     font-size: calc(24px * var(--width-ratio)); /* Original font-size * 0.83 or 83% */
-    /* margin: 0 calc(106px * var(--width-ratio)) 0 calc(127px * var(--width-ratio)); */ /* Right and left margin scaling to 83% */
+    margin: 0 calc(106px * var(--width-ratio)) 0 calc(127px * var(--width-ratio)); /* Right and left margin scaling to 83% */
     /* ^-- Causes overflow, so commented for now */
 }
 
@@ -72,8 +72,8 @@ ul {
     background-color: var(--primary-color);
     font-size: calc(30px * var(--width-ratio)); /* Original font-size * 0.83 or 83% */
     width: clamp(498px, calc(978px * var(--width-ratio)), 811.74px);
-    height: calc(786px * var(--height-ratio));
-    border-radius: 0 0 0 calc(262px * var(--width-ratio));
+    height: calc(0.409375 * var(--height-ratio)); 
+    border-radius: 0 0 0 calc(var(--width-ratio) * 0.13645833);
 }
 
 /* Grid 2 style start */
@@ -105,8 +105,6 @@ ul {
 /* Footer part of Grid 3 */
 footer {
     background-color: var(--primary-color);
-/*     width: calc(1920px * var(--width-ratio));
-    height: calc(210px * var(--height-ratio)); */
-    width: 1920px;
-    height: 210px;
+    width: calc(1920px * var(--width-ratio));
+    height: calc(210px * var(--height-ratio));
 }
