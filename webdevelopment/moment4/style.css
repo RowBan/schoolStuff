@@ -1,15 +1,16 @@
 :root {
     --primary-color: #2F80ED;
     --secondary-color: #E0ECFD;
-    --width-ratio: calc(100vw / 1920); /* For scaling elements width to 1600px -- Original width 1920px */
-    --height-ratio: calc(600 / 1080); /* For scaling elements height to 900px -- Original height 1080px */
+    --width-ratio: calc(1600 * (100vw / 1920)); /* For scaling elements width to 1600px -- Original width 1920px */
+    --height-ratio: calc(900 / 1080); /* For scaling elements height to 900px -- Original height 1080px */
     /* font-size: 62.5%; */
 /*     max-width: 1600px;
-    min-width: 600px;
-    max-height: 900px; */
+    min-width: 600px; */
     font-family: 'Inter', sans-serif;
+    width: var(--width-ratio);
     padding: 0; 
     margin: 0;
+    aspect-ratio: 16 / 9;
 }
 
 h1, h2 {
@@ -61,7 +62,7 @@ ul {
 .grid-1-1 {
     grid-column: 1 / 2;
     font-size: calc(24px * var(--width-ratio)); /* Original font-size * 0.83 or 83% */
-    margin: 0 calc(106px * var(--width-ratio)) 0 calc(127px * var(--width-ratio)); /* Right and left margin scaling to 83% */
+    /* margin: 0 calc(106px * var(--width-ratio)) 0 calc(127px * var(--width-ratio)); */ /* Right and left margin scaling to 83% */
     /* ^-- Causes overflow, so commented for now */
 }
 
@@ -84,6 +85,8 @@ ul {
 .grid-2-1 img {
     width: calc(265px * var(--width-ratio));
     height: calc(265px * var(--height-ratio));
+    max-width: 265px;
+    max-height: 265px;
     margin: 0 0 0 0;
 }
 
@@ -102,6 +105,8 @@ ul {
 /* Footer part of Grid 3 */
 footer {
     background-color: var(--primary-color);
-    width: calc(1920px * var(--width-ratio));
-    height: calc(210px * var(--height-ratio));
+/*     width: calc(1920px * var(--width-ratio));
+    height: calc(210px * var(--height-ratio)); */
+    width: 1920px;
+    height: 210px;
 }
