@@ -1,21 +1,14 @@
 :root {
     --primary-color: #2F80ED;
     --secondary-color: #E0ECFD;
-    --width-ratio: clamp(600px, calc(1600 * (100vw / 1920)), 1600px); /* For scaling elements width to 1600px -- Original width 1920px */
-    --height-ratio: calc(900 * (100vh / 1080)); /* For scaling elements height to 900px -- Original height 1080px */
-    /* font-size: 62.5%; */
-    max-width: 1600px;
-    min-width: 600px;
     font-family: 'Inter', sans-serif;
-    width: var(--width-ratio);
-    height: var(--height-ratio);
     padding: 0; 
     margin: 0;
 }
 
-h1, h2 {
-    margin-block: 0;
-    margin-inline: 0;
+h1, h2, h3, h4, h5, h6, p, ul, li, a, svg {
+    margin: 0;
+    padding: 0;
 }
 
 ul {
@@ -26,27 +19,20 @@ ul {
 /* Top right logo */
 .grid-1-1 svg {
     position: absolute;
-    width: calc(0.0520833 * var(--width-ratio));
-    height: calc(0.04709375 * var(--height-ratio));
     top: 0;
     left: 0;
 }
 
 #first-title {
     color: var(--primary-color);
-    font-size: calc(76px * var(--width-ratio)); /* Original font-size * 0.83 or 83% */
-    /* Right and left margin scaling to 83% */
-    margin: 0 calc(401px * var(--width-ratio)) 0 calc(125px * var(--width-ratio));
 }
 
 #second-title {
-    font-size: calc(32px * var(--width-ratio)); /* Original font-size * 0.83 or 83% */
     color: #fff;
 }
 
 #third-title {
     color: var(--primary-color);
-    font-size: calc(48px * var(--width-ratio)); /* Original font-size * 0.83 or 83% */
 }
 
 /* Grid 1 style start */
@@ -61,19 +47,12 @@ ul {
 /* Column 1 of grid 1 */
 .grid-1-1 {
     grid-column: 1 / 2;
-    font-size: calc(24px * var(--width-ratio)); /* Original font-size * 0.83 or 83% */
-    margin: 0 calc(106px * var(--width-ratio)) 0 calc(127px * var(--width-ratio)); /* Right and left margin scaling to 83% */
-    /* ^-- Causes overflow, so commented for now */
 }
 
 /*Column 2 of grid 1*/
 .grid-1-2 {
     grid-column: 2 / -1;
     background-color: var(--primary-color);
-    font-size: calc(30px * var(--width-ratio)); /* Original font-size * 0.83 or 83% */
-    width: clamp(498px, calc(978px * var(--width-ratio)), 811.74px);
-    height: calc(0.409375 * var(--height-ratio)); 
-    border-radius: 0 0 0 calc(var(--width-ratio) * 0.13645833);
 }
 
 /* Grid 2 style start */
@@ -83,18 +62,13 @@ ul {
 }
 
 .grid-2-1 img {
-    width: calc(265px * var(--width-ratio));
-    height: calc(265px * var(--height-ratio));
     max-width: 265px;
     max-height: 265px;
-    margin: 0 0 0 0;
 }
 
 /* Grid 3 style start */
 .grid-3-1 {
     grid-column: 1 / -1;
-    width: calc(1235px * var(--width-ratio));
-    height: calc(625px * var(--height-ratio));
     background-color: var(--secondary-color);
 }
 
@@ -105,6 +79,4 @@ ul {
 /* Footer part of Grid 3 */
 footer {
     background-color: var(--primary-color);
-    width: calc(1920px * var(--width-ratio));
-    height: calc(210px * var(--height-ratio));
 }
