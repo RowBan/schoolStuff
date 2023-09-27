@@ -41,11 +41,10 @@ ul {
 
 #first-title {
     color: var(--primary-color);
-    font-size: calc(76 * var(--scale-1920));
     font-size: clamp(
     calc(56px * (1600 / 1920)),
     calc(63.33 * var(--scale-1600)),
-    76px
+    63px
     );
 }
 
@@ -60,9 +59,8 @@ ul {
     margin-bottom: clamp(
         0px,
         calc(33.33 * var(--scale-1920)),
-        calc(33.33 * var(--scale-1920))
+        33.33px
         );
-    
 }
 
 #third-title {
@@ -77,11 +75,10 @@ ul {
 /*     justify-content: center;
     align-items: center; */
     grid-template-columns: repeat(2, 4fr);
-    grid-template-rows: repeat(4, fit-content(1fr));
     font-size: clamp(
     calc(20px * (1600 / 1920)),
     calc(24 * var(--scale-1600)),
-    20px
+    17.1167px
     );
     row-gap: 91.1px;
 }
@@ -98,47 +95,55 @@ ul {
     max-width: 500px;
     text-align: left; /* Left-align child */
     /* Not implementing margins here because lazy */
+    font-size: clamp(
+        calc(16px * (1600 / 1920)),
+        calc(24.66 * var(--scale-1920)),
+        24.66px
+        );
 }
 
 /*Column 2 of grid 1*/
 .grid-1-2 {
     font-family: 'Open Sans', 'Inter', sans-serif;
     width: 100%;
-    height: clamp(0px, var(--height-ratio), 655px);
+    max-height: 655px;
+    max-width: 792px;
     grid-column: 2 / -1;
     background-color: var(--primary-color); 
-    border-bottom-left-radius: calc(218.33 * var(--scale-1920));
-    font-size: clamp(
-        calc(20 * (1600 / 1920)),
-        calc(24.66 * var(--scale-1920)),
-        24.66px
-        );
-        
+    border-bottom-left-radius: clamp(
+        0px,
+        calc(218.33 * var(--scale-1920)),
+        218.33px
+        );        
 }
 
 .grid-1-2 .grid-1-2-list {
-    font-size: calc(25px * var(--scale-1920));
+    font-size: clamp(
+        15px,
+        calc(25 * var(--scale-1920)),
+        25px
+        );
     font-weight: 600;
     /* Margins, slightly smaller than original design scaled to 1600 */
     margin-top: clamp(
         0px,
         calc(123.33 * var(--scale-1920)),
-        calc(148 * var(--scale-1920))
+        148px
         );
     margin-right: clamp(
         0px,
         calc(173.33 * var(--scale-1920)),
-        calc(208 * var(--scale-1920))
+        208px
         );
     margin-bottom: clamp(
         0px,
         calc(100.83 * var(--scale-1920)),
-        calc(121 * var(--scale-1920))
+        121px
         );
     margin-left: clamp(
         0px,
         calc(171.66 * var(--scale-1920)),
-        calc(206 * var(--scale-1920))
+        206px
         );
 }
 
@@ -146,8 +151,8 @@ ul {
     padding-bottom: clamp(
         0px,
         calc(12 * var(--scale-1920)),
-        calc(12.5 * var(--scale-1920))
-        );;
+        12px
+        );
 }
 
 /* Grid 2 style start */
