@@ -2,6 +2,11 @@
     --primary-color: #2F80ED;
     --secondary-color: #E0ECFD;
     font-family: 'Inter', sans-serif;
+    font-size: 62.5%; /* 1rem = 10px */
+    --width-ratio: calc(100vw / 1920); /* Integer between 0 and 1 representing percent, 1920 / 1920 = 1 */
+    --const-scale: calc(1400 / 1920); /* ~.83 */
+    --height-ratio: calc(1080 / (100vh * 1080));
+    max-width: 1600px;
     padding: 0; 
     margin: 0;
 }
@@ -25,15 +30,19 @@ ul {
 
 #first-title {
     color: var(--primary-color);
+    font-size: calc(7.6rem * var(--const-scale));
 }
 
 #second-title {
     color: #fff;
+    font-size: calc(3.2rem * var(--const-scale));
+    font-weight: 600;
 }
 
 #third-title {
     color: var(--primary-color);
-}
+    font-size: calc(4.8rem * var(--const-scale));
+    }
 
 /* Grid 1 style start */
 .grid {
@@ -42,6 +51,8 @@ ul {
     align-items: center;
     grid-template-columns: repeat(2, 3fr);
     grid-template-rows: repeat(3, 1fr);
+    font-size: calc(2.4rem * var(--const-scale));
+    /* row-gap: calc(91.5px * var(--const-scale)); */
 }
 
 /* Column 1 of grid 1 */
@@ -49,10 +60,33 @@ ul {
     grid-column: 1 / 2;
 }
 
+.grid-1-1-content {
+    margin: auto;
+    width: 100%;
+    max-width: 555px;
+    height: auto;
+    margin-top: calc(91.5px * var(--const-scale));
+}
+
 /*Column 2 of grid 1*/
 .grid-1-2 {
     grid-column: 2 / -1;
     background-color: var(--primary-color);
+    height: calc(); 
+    width: 100%;
+    border-bottom-left-radius: calc(262px * var(--const-scale));
+    text-align: center;
+}
+
+.grid-1-2 .grid-1-2-list {
+    font-size: calc(25px * var(--const-scale));
+    font-weight: 600;
+    display: inline-block;
+    text-align: left;
+}
+
+.grid-1-2 .grid-1-2-list li {
+    padding: 0.7rem
 }
 
 /* Grid 2 style start */
