@@ -48,6 +48,18 @@ header {
     z-index: 1;
 }
 
+header svg {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+
+@media screen and (max-width: 1032px) {
+    header svg {
+        display: none;
+    }
+}
+
 body {
     margin: 0 0 0 0; /* top right down left */
     padding: 0 0 0 0; /* top right down left */
@@ -102,7 +114,7 @@ table, tr, td, th, form {
 
 td:last-child {
     text-align: center;
-    column-span: 3;
+    column-span: all;
 }
 
 .navbar {
@@ -138,7 +150,7 @@ td:last-child {
 
 @media only screen and (min-width: 700px) {
     .navbar:hover {
-        transition: width margin-left 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
         width: 10%;
         z-index: 1;
     }
@@ -303,7 +315,7 @@ time {
     }
 
     .navbar:hover  {
-        transition: height margin-bottom 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
         height: 12%;
         z-index: 1;
     }
