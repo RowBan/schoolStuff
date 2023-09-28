@@ -74,7 +74,7 @@ ul {
     display: grid;
 /*     justify-content: center;
     align-items: center; */
-    grid-template-columns: repeat(2, 4fr);
+    grid-template-columns: repeat(2, 1fr);
     font-size: clamp(
     calc(20px * (1600 / 1920)),
     calc(24 * var(--scale-1600)),
