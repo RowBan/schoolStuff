@@ -3,8 +3,8 @@
     --secondary-color: #E0ECFD;
     font-family: 'SF Pro', 'Inter', 'Open Sans', sans-serif;
     font-size: 62.5%; /* 1rem = 10px */
-    --scale-1920: calc((100vw / 1920) * (1600/1920)); /* Integer between 0 and 1 * ~.83 */
-    --scale-1600: calc((100vw / 1600) * (1600/1600)); /* Integer between 0 and 1 * 1 */
+    --scale-1920: calc((100vw / 1920) * (1600/1920)); /* Float between 0 and 1 * ~.83 */
+    --scale-1600: calc((100vw / 1600) * (1600/1600)); /* Float between 0 and 1 * 1 */
     /* --width-ratio: calc(1920 * (100vw / 1920)); */ /* Scales width from 0px to infite. clamp() rec. */
     /* --height-ratio: calc(1080 * (100vh / 1080)); */ /* Scales height from 0px to infite. clamp() rec. */
     max-width: 1600px;
