@@ -1,0 +1,8 @@
+Förklara hur Git som versionshanteringssystem kan vara användbart vid utveckling av JavaScript-kod.
+
+Inkludera Git-kommandona ”add”, ”commit” och ”push”.
+---
+Det finns ganska många fördelar med git. För att nämna några så är det lätt att rolla tillbaka ändringar som gjorts som man kanske inte är nöjd med, eller som orsakat problem då alla tidigare versioner finns till hands. Det blir också lättare för flera personer att arbeta på samma kod då de kan dra ned koden till sin dator med git clone, arbeta med den och testa den lokalt. Antingen på en helt ny branch som är separat från "huvudprojektet". Då kan man pusha ändringar och be kollegor ta sig en titt innan man mergar till huvudprojektet.
+
+
+När man klonar ett repo så får man en kopia av huvudbranchen på sin dator. Vid ändringar så är ser git dessa ändringar. För att stage:a dina ändringar skriver man "git add [filen du vill lägga till till staging area]" eller "git add ." för allt. Detta är filer du lägger till för nästa steg, vilket är "git commit". Kör man "git commit" så skapar man en commit som kan bli pushad till den branch man är på med "git push" Är man på huvudbranchen och repo tillåter och "git push" så pushas dina ändringar direkt till "huvudprojektet". Huvudprojektet kan vara skyddat och kräva review av kollegor innan merge, då måste en merge request (MR) göras.

@@ -1,0 +1,13 @@
+Vad är en array i JavaScript och hur skapar du en? Visa ett exempel på hur du lägger till och tar bort element från en array.
+--
+let arr = ['1', '2'];
+
+En array är ett globalt objekt för att lagra flera värden i samma variabel.
+
+För att lägga till eller ta bort ur en array:
+
+arr.push('3'); // Lägger till en 3:a på slutet av arrayen.
+
+arr.pop(); // Tar bort sista elementet i arrayen
+
+Finns lite olika metoder för att plocka bort element ur ett array eller lägga till. Som exempelvis unshift, splice et.c.

@@ -1,0 +1,9 @@
+Vad är en händelselyssnare (”event listener”) och hur använder du den för att hantera användarinteraktion på webbsidor? 
+
+Ge exempel på olika typer av ”events”, och vad de kan användas till. Ge kodexempel.
+---
+En eventlistener är en metod som används för att kolla efter events som händer på vanligtvis element eller andra DOM-noder. Events kan vara ett klick och massor av andra saker.
+
+let button = document.getElementById("button"); // Först måste vi ha ett element att köra eventlistener på.
+
+button.addEventListener('click', runFunction); // typen av event är 'click' och den kör en för tillfället odefinerad funktion när det klickas på elementet button.

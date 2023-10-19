@@ -1,0 +1,18 @@
+Vad kommer följande JavaScript-kod att logga i konsolen?
+
+let today = new Date();
+
+console.log(today.getMonth());
+--
+a.
+
+Månaden i form av en sträng (t.ex., "Oktober").
+b.
+
+Dagens datum som ett heltal (1 för den första dagen i månaden).
+c.
+
+Månaden som ett heltal (0 för januari, 11 för december).
+d.XXX
+
+Månaden som ett heltal (1 för januari, 12 för december).

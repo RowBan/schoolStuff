@@ -1,0 +1,28 @@
+Du har ett element med följande HTML-kod: 
+
+<p id="demo">Detta är en <span id="red-text">paragraf</span>.</p>
+
+Hur skriver du i JavaScript för att ändra textfärgen på ordet "paragraf" till röd?
+---
+let redText = document.getElementById("red-text");
+
+redText.style.color = "red";
+
+
+Skulle dock troligtvis inte fungera utan någon sorts funktion som kallas vid ett event.
+
+Som exempelvis:
+
+function changeColor() {
+
+let redText = document.getElementById("red-text");
+
+redText.style.color = "red";
+
+}
+
+
+window.onload(changeColor);
+
+
+Detta skulle också addera color="red" i inline style.

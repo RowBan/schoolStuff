@@ -1,0 +1,9 @@
+Vad är skillnaden mellan let, const och var när det gäller deklaration av variabler? 
+
+Ge exempel och påvisa skillnader i JavaScript-kod.
+--
+const är en konstant och kan inte ändras. Om det inte är ett objekt, då kan innehållet ändras men ej referensen.
+
+var är en variabel med globalt scope om deklarerad utanför en funktion som kan bli omdefinerad.
+
+let är en variabel med globalt, lokalt eller block scope och kan inte bli omdefinerad.

@@ -1,0 +1,7 @@
+Förklara global och local scope.
+
+Global scope är en variabel som kan användas överallt i koden. Inom funktioner, klasser och så vidare.
+
+Local scope är en variabel som endast går att använda i sin lokala miljö. Exempelvis funktion eller klass.
+
+Block scope är en som bara kan användas inom sitt block {}
